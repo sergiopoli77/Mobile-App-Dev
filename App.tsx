@@ -8,7 +8,7 @@ const App = () => {
       </View>
 
       <View style={styles.container}>
-        <Text style={styles.title2}> Basic React Native 2</Text>
+        <Text style={styles.title2}>Basic React Native kedua</Text>
       </View>
     </View>
   );
