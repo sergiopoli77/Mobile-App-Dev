@@ -8,7 +8,7 @@ const App = () => {
       </View>
 
       <View style={styles.container}>
-        <Text style={styles.title2}>Basic React Native kedua</Text>
+        <Text style={styles.title2}>Hello ini Basic React Native</Text>
       </View>
     </View>
   );
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   },
   title2: {
     fontSize: 30,
-    color: 'blue',
+    color: 'white',
     fontWeight: '800',
   },
 });
