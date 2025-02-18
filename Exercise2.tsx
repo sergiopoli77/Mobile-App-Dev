@@ -5,7 +5,7 @@ const App = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <Text style={styles.title}>Biodata</Text>
-      <Image style={styles.image} source={require('./assets/logo.png')} />
+      <Image style={styles.image} source={require('./assets/profil.jpeg')} />
 
       <View style={styles.container}>
         <Text style={styles.label}>Nama:</Text>
