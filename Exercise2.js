@@ -30,8 +30,8 @@ const App = () => {
 
 const styles = StyleSheet.create({
   back: {
-    height: 65,
-    width: 65,
+    height: 45,
+    width: 45,
     marginTop: 10,
     marginLeft: 5,
   },
