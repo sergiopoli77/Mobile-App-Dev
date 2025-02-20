@@ -4,7 +4,8 @@ import {View, Text, StyleSheet, Image, ScrollView} from 'react-native';
 const App = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
-      <Text style={styles.title}>Biodata</Text>
+      <Image style={styles.back} source={require('./assets/arrowback.png')} />
+      <Text style={styles.title}>Profile</Text>
       <Image style={styles.image} source={require('./assets/profil.jpeg')} />
 
       <View style={styles.container}>
@@ -28,22 +29,29 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
+  back: {
+    height: 65,
+    width: 65,
+    marginTop: 10,
+    marginLeft: 5,
+  },
   image: {
     height: 200,
     width: 200,
-    borderRadius: 75,
+    borderRadius: 100,
     alignSelf: 'center',
     marginVertical: 20,
+    marginTop: -20,
   },
   title: {
     fontSize: 30,
     fontWeight: 'bold',
     textAlign: 'center',
     borderColor: 'black',
-    borderWidth: 1,
     padding: 20,
     margin: 20,
     color: 'black',
+    marginTop: -30,
   },
   container: {
     padding: 20,
