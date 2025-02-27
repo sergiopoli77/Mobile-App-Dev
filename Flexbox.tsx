@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
   },
   redContainer: {
     backgroundColor: 'red',
