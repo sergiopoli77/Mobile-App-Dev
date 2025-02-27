@@ -16,17 +16,21 @@ export default Flexbox;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'column',
   },
   redContainer: {
-    flex: 1,
     backgroundColor: 'red',
+    height: 100,
+    width: 100,
   },
   greenContainer: {
-    flex: 1,
     backgroundColor: 'green',
+    height: 100,
+    width: 100,
   },
   blueContainer: {
-    flex: 1,
     backgroundColor: 'blue',
+    height: 100,
+    width: 100,
   },
 });
