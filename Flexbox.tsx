@@ -17,7 +17,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-evenly', //main axis
+    alignItems: 'flex-start', //cross axia
   },
   redContainer: {
     backgroundColor: 'red',
