@@ -16,9 +16,9 @@ export default Flexbox;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
+    flexDirection: 'row',
     justifyContent: 'space-evenly', //main axis
-    alignItems: 'flex-end', //cross axia
+    alignItems: 'center', //cross axis
   },
   redContainer: {
     backgroundColor: 'red',
