@@ -5,19 +5,37 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import Input from './components/Input';
 import Button from './components/Button';
 
 const Signin = () => {
+  // let title = 'Welcome!!!'; //Variabel biasa
+  const [title, setTitle] = useState('Welcome!!!'); //State
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const onSubmit = () => {
+    //title = 'Selamat Datang';
+    setTitle('Selamat Datang');
+    console.log(username, password);
+  };
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome</Text>
-      <Input label="Username" placeholder="Masukan username anda" />
-      <Input label="Password" placeholder="Masukan password anda" />
-      <Input label="Alamat" placeholder="Masukan alamat anda" />
-      <Input label="No Tlp" placeholder="Masukan nomor tlpn anda" />
-      <Button label="Sign In" />
+      <Text style={styles.title}>{title}</Text>
+      <Input
+        label="Username"
+        placeholder="Masukan username anda"
+        onChangeText={e => setUsername(e)}
+      />
+      <Input
+        label="Password"
+        placeholder="Masukan password anda"
+        onChangeText={e => setPassword(e)}
+        secureTextEntry={true}
+      />
+      <Button label="Sign In" onPress={onSubmit} />
     </View>
   );
 };

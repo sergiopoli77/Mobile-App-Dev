@@ -15,7 +15,7 @@ const Exercise5 = () => {
       <Button title="Sign in with Facebook" type="facebook" />
       <Button title="Sign in with Apple" type="apple" />
     </View>
-  );
+  ); 
 };
 
 export default Exercise5;

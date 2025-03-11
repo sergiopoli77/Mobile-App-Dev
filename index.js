@@ -12,4 +12,4 @@ import Signin from './Signin';
 import Exercise5 from './Exercise5/Exercise5';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => Exercise5);
+AppRegistry.registerComponent(appName, () => Signin);
