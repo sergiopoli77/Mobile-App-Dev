@@ -68,6 +68,7 @@ const Exercise6 = () => {
           label="Phone Number"
           placeholder="Masukan nomor telepon anda"
           onChangeText={handlePhone}
+          keyboardType="numeric"
         />
         <Button label="Register" color="purple" onPress={handleClick} />
       </View>
