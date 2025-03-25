@@ -12,6 +12,7 @@ import Signin from './Signin';
 import Exercise5 from './Exercise5/Exercise5';
 import Exercise6 from './Exercise6/Exercise6';
 import RestAPI from './RestAPI';
+import UserList from './Exercise7/UserList';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => RestAPI);
+AppRegistry.registerComponent(appName, () => UserList);
