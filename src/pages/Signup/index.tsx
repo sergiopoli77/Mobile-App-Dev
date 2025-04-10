@@ -5,10 +5,10 @@ import TextInput from '../../Components/molecules/TextInput';
 import Button from '../../Components/atoms/Button';
 import Gap from '../../Components/atoms/Gap';
 
-const SignOut = () => {
+const Signup = () => {
   return (
     <View style={styles.pageContainer}>
-      <Header title="Sign In" />
+      <Header title="Sign Up" />
       <View style={styles.contentContainer}>
         <Gap height={26} />
         <TextInput label="Full Name" placeholder="Type your full name" />
@@ -27,7 +27,7 @@ const SignOut = () => {
   );
 };
 
-export default SignOut;
+export default Signup;
 
 const styles = StyleSheet.create({
   pageContainer: {

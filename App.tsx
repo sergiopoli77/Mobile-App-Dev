@@ -1,7 +1,7 @@
 import React from 'react';
 import SplashScreen from './src/pages/SplashScreen';
 import Signin from './src/pages/./Signin';
-import Signout from './src/pages/./Signout';
+import Signout from './src/pages/Signup';
 
 const App = () => {
   return <Signout />;
