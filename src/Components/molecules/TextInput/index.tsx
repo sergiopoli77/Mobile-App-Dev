@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Regular',
     fontSize: 16,
     marginBottom: 6,
+    color: '#020202',
   },
   input: {
     borderWidth: 1,
