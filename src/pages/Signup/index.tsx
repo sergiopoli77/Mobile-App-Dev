@@ -8,12 +8,10 @@ import {ArrowBack} from '../../assets';
 const Signup = () => {
   return (
     <View style={styles.pageContainer}>
-      {/* Header custom dengan ArrowBack dan judul */}
       <View style={styles.headerRow}>
         <ArrowBack style={styles.backIcon} />
         <Text style={styles.headerTitle}>Sign Up</Text>
       </View>
-
       <View style={styles.contentContainer}>
         <View style={styles.profilContainer}>
           <View style={styles.profil}>
@@ -22,7 +20,7 @@ const Signup = () => {
             </View>
           </View>
         </View>
-        <Gap height={26} />
+        <Gap height={36} />
         <TextInput label="Full Name" placeholder="Type your full name" />
         <Gap height={16} />
         <TextInput
