@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontFamily: 'Poppins-Medium',
     color: '#020202',
-    marginLeft: 12,
+    marginLeft: 20,
   },
   profilContainer: {
     marginTop: 26,
