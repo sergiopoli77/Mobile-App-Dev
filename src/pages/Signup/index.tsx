@@ -32,7 +32,13 @@ const Signup = ({navigation}) => {
         <Gap height={16} />
         <TextInput label="Password" placeholder="Type your password" />
         <Gap height={24} />
-        <Button label="Continue" />
+        <Button
+          label="Continue"
+          onPress={() => {
+            console.log('Navigating to SignIn');
+            navigation.navigate('SignIn');
+          }}
+        />
         <Gap height={12} />
       </View>
     </View>
