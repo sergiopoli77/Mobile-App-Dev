@@ -1,15 +1,17 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import TextInput from '../../Components/molecules/TextInput';
 import Button from '../../Components/atoms/Button';
 import Gap from '../../Components/atoms/Gap';
 import {ArrowBack} from '../../assets';
 
-const Signup = () => {
+const Signup = ({navigation}) => {
   return (
     <View style={styles.pageContainer}>
       <View style={styles.headerRow}>
-        <ArrowBack style={styles.backIcon} />
+        <TouchableOpacity onPress={() => navigation.navigate('SignIn')}>
+          <ArrowBack style={styles.backIcon} />
+        </TouchableOpacity>
         <Text style={styles.headerTitle}>Sign Up</Text>
       </View>
       <View style={styles.contentContainer}>

@@ -1,11 +1,12 @@
 import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import Header from '../../Components/molecules/Header';
 import TextInput from '../../Components/molecules/TextInput';
 import Button from '../../Components/atoms/Button';
 import Gap from '../../Components/atoms/Gap';
 
-const SignIn = () => {
+const SignIn = ({navigation}) => {
+  console.log('Navigation:', navigation); // Tambahkan log ini
   return (
     <View style={styles.pageContainer}>
       <Header title="Sign In" />
@@ -24,6 +25,10 @@ const SignIn = () => {
           label="Create New Account"
           color="#8D92A3"
           textColor="#FFFFFF"
+          onPress={() => {
+            console.log('Navigating to SignUp');
+            navigation.navigate('SignUp');
+          }}
         />
       </View>
     </View>
