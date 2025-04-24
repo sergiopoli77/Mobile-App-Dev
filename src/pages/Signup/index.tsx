@@ -1,11 +1,42 @@
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import React from 'react';
+import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
+import React, {useState} from 'react';
 import TextInput from '../../Components/molecules/TextInput';
 import Button from '../../Components/atoms/Button';
 import Gap from '../../Components/atoms/Gap';
-import {ArrowBack} from '../../assets';
+import {ArrowBack, NullPhoto} from '../../assets';
+import {launchImageLibrary} from 'react-native-image-picker';
+import {showMessage} from 'react-native-flash-message';
 
 const Signup = ({navigation}) => {
+  const [photo, setPhoto] = useState(NullPhoto);
+
+  const getImage = async () => {
+    const result = await launchImageLibrary({
+      maxHeight: 100,
+      maxWidth: 100,
+      quality: 0.5,
+      includeBase64: true,
+      mediaType: 'photo',
+    });
+
+    if (result.didCancel) {
+      showMessage({
+        message: 'Photo selection canceled',
+        type: 'danger',
+      });
+    } else if (result.assets && result.assets.length > 0) {
+      const asset = result.assets[0];
+      const base64 = `data:${asset.type};base64,${asset.base64}`;
+      const source = {uri: base64};
+      setPhoto(source);
+    } else {
+      showMessage({
+        message: 'Error selecting photo',
+        type: 'danger',
+      });
+    }
+  };
+
   return (
     <View style={styles.pageContainer}>
       <View style={styles.headerRow}>
@@ -16,11 +47,15 @@ const Signup = ({navigation}) => {
       </View>
       <View style={styles.contentContainer}>
         <View style={styles.profilContainer}>
-          <View style={styles.profil}>
-            <View style={styles.add}>
-              <Text style={styles.addLabel}>Add Photo</Text>
-            </View>
-          </View>
+          <TouchableOpacity style={styles.profil} onPress={getImage}>
+            {photo.uri ? (
+              <Image source={photo} style={styles.photo} />
+            ) : (
+              <View style={styles.add}>
+                <Text style={styles.addLabel}>Add Photo</Text>
+              </View>
+            )}
+          </TouchableOpacity>
         </View>
         <Gap height={36} />
         <TextInput label="Full Name" placeholder="Type your full name" />
@@ -82,6 +117,11 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#8D92A3',
     borderStyle: 'dashed',
+  },
+  photo: {
+    height: 130,
+    width: 130,
+    borderRadius: 100,
   },
   add: {
     backgroundColor: '#F0F0F0',
