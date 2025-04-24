@@ -21,7 +21,7 @@ const Signup = ({navigation}) => {
 
     if (result.didCancel) {
       showMessage({
-        message: 'Photo selection canceled',
+        message: 'Pilih foto dibatalkan',
         type: 'danger',
       });
     } else if (result.assets && result.assets.length > 0) {
